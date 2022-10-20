@@ -1,21 +1,10 @@
 package uscs;
 
 public class Empregado {
-    private String nome;
-    private String endereco;
-    private double valorHora;
-    private double horasTrab;
-    
-    public Empregado(){
-        
-    }
-    
-    public Empregado(String nome, String endereco, double valorHora, double horasTrab){
-        this.nome = nome;
-        this.endereco = endereco;
-        this.valorHora = valorHora;
-        this.horasTrab = horasTrab;
-    }
+    protected String nome;
+    protected String endereco;
+    protected double valorHora;
+    protected double horasTrab;
 
     public String getNome() {
         return nome;
@@ -49,6 +38,19 @@ public class Empregado {
         this.horasTrab = horasTrab;
     }
     
+        
+    public Empregado(){
+        
+    }
+    
+    public Empregado(String nome, String endereco, double valorHora, double horasTrab){
+        this.nome = nome;
+        this.endereco = endereco;
+        this.valorHora = valorHora;
+        this.horasTrab = horasTrab;
+    }
+    
+    
     public void ImprimeEmpregado(){
         System.out.println("\nDados do empregado:");
         System.out.println("Nome: " + nome);
@@ -59,7 +61,6 @@ public class Empregado {
         
     public void CalculaSalario(){
         double salario = valorHora*horasTrab;
-        System.out.println("Salario: R$" + salario);
     }
     
     public void ImprimeSalario(){
